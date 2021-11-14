@@ -1,0 +1,12 @@
+.img-size{
+    width: 250px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+
+.item-center{
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
