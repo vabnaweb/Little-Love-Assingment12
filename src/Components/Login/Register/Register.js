@@ -43,7 +43,7 @@ const Register = () => {
             Name: name,
             Email: email
         }
-        fetch('http://localhost:5000/users', {
+        fetch('https://gentle-wildwood-06404.herokuapp.com/users', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -51,7 +51,7 @@ const Register = () => {
             body: JSON.stringify(users)
         })
 
-        fetch('http://localhost:5000/users', {
+        fetch('https://gentle-wildwood-06404.herokuapp.com/users', {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

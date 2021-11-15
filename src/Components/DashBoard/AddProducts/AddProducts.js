@@ -21,7 +21,7 @@ const AddProducts = () => {
         const products = {
             ...productData
         }
-        fetch('http://localhost:5000/products', {
+        fetch('https://gentle-wildwood-06404.herokuapp.com/products', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

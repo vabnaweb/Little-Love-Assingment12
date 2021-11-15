@@ -7,7 +7,7 @@ const ProductsHome = () => {
     const [products, setproducts] = useState([])
     const {isLoading} = useAuth();
     useEffect(() => {
-        fetch("http://localhost:5000/products")
+        fetch("https://gentle-wildwood-06404.herokuapp.com/products")
             .then(res => res.json())
             .then(data => setproducts(data.slice(0, 6)))
     }, [])

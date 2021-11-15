@@ -8,7 +8,7 @@ const ManageAllOrdersData = (props) => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure? Do you want to cancel this Order?")
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://gentle-wildwood-06404.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
@@ -28,7 +28,7 @@ const ManageAllOrdersData = (props) => {
     }
 
     const hanldeApproved = (e) => {
-        const url = `http://localhost:5000/orders/${_id}`;
+        const url = `https://gentle-wildwood-06404.herokuapp.com/orders/${_id}`;
         fetch(url, {
             method: "PUT",
             headers: {

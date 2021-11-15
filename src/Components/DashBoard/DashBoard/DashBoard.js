@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar} from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import {
     Switch,
@@ -32,33 +32,29 @@ const DashBoard = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" >
                         <Nav className="me-auto">
-                            <NavLink as={Link} style={{ textDecoration: "none", color: "white", marginRight: "10px", fontWeight: "600" }} to="/products">Products</NavLink>
+                            {!admin &&
+                                <>
+                                    <NavLink as={Link} style={{ textDecoration: "none", color: "white", marginRight: "10px", fontWeight: "600" }} to="/products">Products</NavLink>
 
-                            <NavLink as={Link} style={{ textDecoration: "none", color: "white", marginRight: "10px", fontWeight: "600" }} to={`${url}/myorders`}>My Orders</NavLink>
-                            <NavLink as={Link} style={{ textDecoration: "none", color: "white", marginRight: "10px", fontWeight: "600" }} to={`${url}/paymentsystem`}>Payment Method</NavLink>
-                            <NavLink as={Link} style={{ textDecoration: "none", color: "white", fontWeight: "600" }} to={`${url}/review`}>Reviews</NavLink>
+                                    <NavLink as={Link} style={{ textDecoration: "none", color: "white", marginRight: "10px", fontWeight: "600" }} to={`${url}/myorders`}>My Orders</NavLink>
+                                    <NavLink as={Link} style={{ textDecoration: "none", color: "white", marginRight: "10px", fontWeight: "600" }} to={`${url}/paymentsystem`}>Payment Method</NavLink>
+                                    <NavLink as={Link} style={{ textDecoration: "none", color: "white", fontWeight: "600" }} to={`${url}/review`}>Reviews</NavLink>
+                                </>
+                            }
 
                             {admin &&
                                 <>
-                                    <NavLink as={Link} style={{ textDecoration: "none", color: "yellow", fontWeight: "600" }} to={`${url}/manageAllOrders`}>Manage All Orders</NavLink>
-                                    <NavLink as={Link} style={{ textDecoration: "none", color: "yellow", fontWeight: "600" }} to={`${url}/addProducts`}>Add Products</NavLink>
-                                    <NavLink as={Link} style={{ textDecoration: "none", color: "yellow", fontWeight: "600" }} to={`${url}/makeAdmin`}>Make Admin</NavLink>
-                                    <NavLink as={Link} style={{ textDecoration: "none", color: "yellow", fontWeight: "600" }} to={`${url}/manageProducts`}>Manage Products</NavLink>
+                                    <NavLink as={Link} style={{ marginRight:"10px", textDecoration: "none", color: "yellow", fontWeight: "600" }} to={`${url}/manageAllOrders`}>Manage All Orders</NavLink>
+                                    <NavLink as={Link} style={{  marginRight:"10px", textDecoration: "none", color: "yellow", fontWeight: "600" }} to={`${url}/addProducts`}>Add Products</NavLink>
+                                    <NavLink as={Link} style={{ marginRight:"10px", textDecoration: "none", color: "yellow", fontWeight: "600" }} to={`${url}/makeAdmin`}>Make Admin</NavLink>
+                                    <NavLink as={Link} style={{ marginRight:"10px", textDecoration: "none", color: "yellow", fontWeight: "600" }} to={`${url}/manageProducts`}>Manage Products</NavLink>
                                 </>
                             }
 
 
                         </Nav>
 
-                        {/* <Nav>
-                            {admin && <NavDropdown title="Admin Panel" style={{ color: "white" }} className="fw-bold active">
-                                <NavLink as={Link} style={{ textDecoration: "none", color: "black", fontWeight: "600", marginLeft: "10px" }} to={`${url}/manageAllOrders`}>Manage All Orders</NavLink><br />
-                                <NavLink as={Link} style={{ textDecoration: "none", color: "black", fontWeight: "600", marginLeft: "10px" }} to={`${url}/addProducts`}>Add Products</NavLink><br />
-                                <NavLink as={Link} style={{ textDecoration: "none", color: "black", fontWeight: "600", marginLeft: "10px" }} to={`${url}/makeAdmin`}>Make Admin</NavLink><br />
-                                <NavLink as={Link} style={{ textDecoration: "none", color: "black", fontWeight: "600", marginLeft: "10px" }} to={`${url}/manageProducts`}>Manage Products</NavLink>
-                            </NavDropdown>}
-                        </Nav> */}
-
+                       
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

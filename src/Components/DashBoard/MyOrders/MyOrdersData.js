@@ -7,7 +7,7 @@ const MyOrdersData = (props) => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure? Do you want to delete this order?")
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://gentle-wildwood-06404.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

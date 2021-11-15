@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
     const [allOrder, setAllOrder] = useState([])
     const {isLoading} = useAuth();
     useEffect(() => {
-        fetch(`http://localhost:5000/orders`)
+        fetch(`https://gentle-wildwood-06404.herokuapp.com/orders`)
             .then(res => res.json())
             .then(data => setAllOrder(data))
     }, [])

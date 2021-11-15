@@ -8,7 +8,7 @@ const ManageProductsData = (props) => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure? Do you want to delete this product?")
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://gentle-wildwood-06404.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

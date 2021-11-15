@@ -16,7 +16,7 @@ const Review = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
+        fetch("https://gentle-wildwood-06404.herokuapp.com/reviews")
         .then(res => res.json())
         .then(data => setReviews(data))
     },[])
@@ -43,7 +43,7 @@ const Review = () => {
         }
         console.log(reviews);
 
-        fetch("http://localhost:5000/reviews", {
+        fetch("https://gentle-wildwood-06404.herokuapp.com/reviews", {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

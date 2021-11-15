@@ -16,7 +16,7 @@ const PlaceOrder = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${_id}`)
+        fetch(`https://gentle-wildwood-06404.herokuapp.com/products/${_id}`)
             .then(res => res.json())
             .then(data => setDetails(data))
     }, [_id])
@@ -47,7 +47,7 @@ const PlaceOrder = () => {
 
         }
         console.log(order);
-        fetch("http://localhost:5000/orders", {
+        fetch("https://gentle-wildwood-06404.herokuapp.com/orders", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

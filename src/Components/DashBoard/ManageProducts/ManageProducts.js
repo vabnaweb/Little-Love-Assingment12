@@ -7,7 +7,7 @@ const ManageProducts = () => {
     const [products, setProducts] = useState([])
     const {isLoading} = useAuth();
     useEffect(() => {
-        fetch("http://localhost:5000/products")
+        fetch("https://gentle-wildwood-06404.herokuapp.com/products")
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

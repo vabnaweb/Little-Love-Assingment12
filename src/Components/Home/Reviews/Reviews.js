@@ -9,7 +9,7 @@ const Reviews = () => {
     const [allReviews, setAllReviews] = useState([])
     const { user } = useAuth()
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
+        fetch("https://gentle-wildwood-06404.herokuapp.com/reviews")
             .then(res => res.json())
             .then(data => {
                 const v = data.filter(p => p.email === user.email)
@@ -19,7 +19,7 @@ const Reviews = () => {
     }, [user.email])
 
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
+        fetch("https://gentle-wildwood-06404.herokuapp.com/reviews")
             .then(res => res.json())
             .then(data => setAllReviews(data))
     }, [])
